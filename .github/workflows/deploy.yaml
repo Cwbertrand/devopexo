@@ -16,7 +16,6 @@ jobs:
                     ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
             -   name: Deploy to Server
-                # it deploys by it's
                 run: | 
                     ssh -o StrictHostKeyChecking=no -l ${{ secrets.SSH_USER }} ${{ secrets.SERVER_IP }} << 'EOF'
                         cd /var/www/app
